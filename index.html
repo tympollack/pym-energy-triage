@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PYM Energy Diagnostics</title>
+    
+    <style>
+      /* Reset margins so the color fills the screen entirely */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        /* Default fallback background (matches the corporate/landing slate-50) */
+        background-color: #f8fafc; 
+      }
+    </style>
+    
+    <script>
+      /* 
+        This runs instantly before React loads.
+        It sniffs the URL and paints the background so the user never sees a white flash.
+      */
+      (function() {
+        try {
+          const path = window.location.pathname.toLowerCase();
+          if (path.includes('/dev')) {
+            // Paint it terminal black immediately
+            document.body.style.backgroundColor = '#0a0a0a'; 
+          } else if (path.includes('/ops')) {
+            // Paint it operational slate
+            document.body.style.backgroundColor = '#f8fafc'; 
+          }
+          // audit and root will safely fall back to the CSS default above
+        } catch (e) {
+          // Failsafe catch
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
