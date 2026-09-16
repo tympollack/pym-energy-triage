@@ -82,13 +82,13 @@ const LandingPage = ({ onNavigate }) => {
             href="https://www.peplink.com" 
             target="_blank" 
             rel="noreferrer"
-            className="hidden md:flex items-center transition-opacity hover:opacity-90"
+            className="hidden md:flex items-center shrink-0 transition-opacity hover:opacity-90"
             title="Authorized Peplink Silver Partner"
           >
             <img 
               src="/peplink-silver-partner.svg" 
               alt="Peplink Silver Partner" 
-              className="h-11 w-auto"
+              className="h-16 w-auto shrink-0"
             />
           </a>
           <button 
@@ -238,7 +238,7 @@ const LandingPage = ({ onNavigate }) => {
 
         {/* Peplink Authorized Reseller & Brand Clear Space */}
         <div className="mt-16 pt-12 border-t border-slate-800 flex flex-col items-center">
-          <div className="py-4 px-8 mb-3">
+          <div className="py-6 px-12 mb-3">
             <img 
               src="/peplink_logo.svg" 
               alt="Peplink" 
