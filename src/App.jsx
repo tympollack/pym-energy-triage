@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
-  Shield, ChevronRight, X, Terminal, Building2, 
-  AlertTriangle, CheckCircle2, Layers, ArrowRight, 
-  Cpu, Users, BarChart3, Network 
+  Shield, ChevronRight, X, Terminal, 
+  AlertTriangle, CheckCircle2, ArrowRight, 
+  Users, Network 
 } from 'lucide-react';
 
 import { createClient } from '@supabase/supabase-js';
@@ -14,7 +14,7 @@ try {
   if (supabaseUrl && supabaseAnonKey) {
     supabase = createClient(supabaseUrl, supabaseAnonKey);
   }
-} catch (e) {
+} catch {
   console.warn("Supabase credentials not found. Running in local mock mode.");
 }
 
@@ -78,6 +78,19 @@ const LandingPage = ({ onNavigate }) => {
             </h1>
         </div>
         <div className="flex items-center gap-4">
+          <a 
+            href="https://www.peplink.com" 
+            target="_blank" 
+            rel="noreferrer"
+            className="hidden md:flex items-center transition-opacity hover:opacity-90"
+            title="Authorized Peplink Silver Partner"
+          >
+            <img 
+              src="/peplink-silver-partner.svg" 
+              alt="Peplink Silver Partner" 
+              className="h-11 w-auto"
+            />
+          </a>
           <button 
             onClick={() => setIsHtnModalOpen(true)}
             className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium text-slate-500 hover:text-indigo-600 transition-colors"
@@ -101,13 +114,13 @@ const LandingPage = ({ onNavigate }) => {
         
         <div className="max-w-4xl mx-auto text-center">
           <h2 className={`text-4xl sm:text-6xl font-extrabold ${theme.headerFont} tracking-tight text-slate-900 mb-6 leading-tight`}>
-            Stop patching legacy systems.<br/>
+            Fix operational bottlenecks.<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">
-              Architect for scale.
+              Deploy resilient systems.
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            PYM Energy bridges the gap between executive vision and technical execution. We diagnose organizational bottlenecks and engineer scalable, asynchronous infrastructure.
+            We diagnose software friction and automate manual workflows. Get clear technical blueprints through an asynchronous audit—no sales calls required.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button 
@@ -140,10 +153,7 @@ const LandingPage = ({ onNavigate }) => {
             
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                Scaling a modern business requires fluency in both boardroom strategy and server-room architecture. 
-              </p>
-              <p>
-                With 15 years of experience in software engineering and enterprise architecture, Tymz applies advanced systems engineering principles to human and business operations. The result is holistic, scalable infrastructure designed to eliminate friction and maximize ROI.
+                Tymz Pollack combines 15 years of software engineering with an MBA in systems strategy. He builds custom data integrations, automates backend handoffs, and designs fault-tolerant networks for growing operations.
               </p>
             </div>
             
@@ -165,34 +175,49 @@ const LandingPage = ({ onNavigate }) => {
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 text-indigo-600">
-                <Network size={24} />
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 text-indigo-600">
+                  <CheckCircle2 size={24} />
+                </div>
+                <div className="flex items-baseline justify-between mb-3">
+                  <h4 className="text-xl font-bold text-slate-900">Systems & Operations Audit</h4>
+                  <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700">$500</span>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  A structured 2-week diagnosis of software bottlenecks, manual data entry, and workflow friction. Includes a comprehensive action brief.
+                </p>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Systems Integration</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                The most expensive inefficiencies happen where physical workflows meet digital infrastructure. We architect seamless integrations that close the gap between human workers and backend tech.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
-                <Users size={24} />
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+                  <Users size={24} />
+                </div>
+                <div className="flex items-baseline justify-between mb-3">
+                  <h4 className="text-xl font-bold text-slate-900">Fractional Systems Leadership</h4>
+                  <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">$1,500/mo</span>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Dedicated asynchronous advisory and monthly reviews to keep internal systems stable as operations scale.
+                </p>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Staffing Architecture</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Growth shouldn't mean chaotic hiring. We model your workforce requirements against scaling targets to determine exactly when to deploy full-time hires versus fractional systems.
-              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-6 text-emerald-600">
-                <BarChart3 size={24} />
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6 text-amber-600">
+                  <Network size={24} />
+                </div>
+                <div className="flex items-baseline justify-between mb-3">
+                  <h4 className="text-xl font-bold text-slate-900">Peplink Network Architecture</h4>
+                  <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">Silver VAR</span>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Certified multi-WAN bonding, SpeedFusion failover tuning, and enterprise router deployment for mission-critical connectivity.
+                </p>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">CapEx Modeling</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Every inefficiency has a dollar amount attached. We build robust financial models to project the exact ROI for physical buildouts and digital transformations.
-              </p>
             </div>
           </div>
         </div>
@@ -200,20 +225,34 @@ const LandingPage = ({ onNavigate }) => {
 
       {/* Footer CTA */}
       <footer className="bg-slate-900 py-16 px-6 text-center">
-        <h3 className={`text-3xl font-bold ${theme.headerFont} text-white mb-6`}>Ready to optimize your stack?</h3>
+        <h3 className={`text-3xl font-bold ${theme.headerFont} text-white mb-6`}>Identify your operational bottlenecks.</h3>
         <p className="text-slate-400 max-w-xl mx-auto mb-8">
-          Skip the contact form. Submit your operational bottlenecks through our secure intake portal for a comprehensive async review.
+          Submit your tech stack and current friction points through our intake portal. Qualified submissions receive a custom video diagnosis within 48 hours.
         </p>
         <button 
           onClick={() => onNavigate('/ops')}
           className="bg-indigo-500 text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-indigo-400 transition-all shadow-lg flex items-center justify-center gap-2 mx-auto"
         >
-          Open Triage Portal <Terminal size={18} />
+          Start Async Diagnostic &gt;_
         </button>
-        <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500">
-          <span>&copy; {new Date().getFullYear()} PYM Energy, LLC.</span>
-          <span className="hidden sm:inline">&bull;</span>
-          <span className="flex items-center gap-1"><Shield size={12} /> HTN Compliant Architecture</span>
+
+        {/* Peplink Authorized Reseller & Brand Clear Space */}
+        <div className="mt-16 pt-12 border-t border-slate-800 flex flex-col items-center">
+          <div className="py-4 px-8 mb-3">
+            <img 
+              src="/peplink_logo.svg" 
+              alt="Peplink" 
+              className="w-28 h-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-8">
+            PYM Energy, LLC is an Authorized Peplink Silver Value-Added Reseller providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500">
+            <span>&copy; {new Date().getFullYear()} PYM Energy, LLC.</span>
+            <span className="hidden sm:inline">&bull;</span>
+            <span className="flex items-center gap-1"><Shield size={12} /> HTN Compliant Architecture</span>
+          </div>
         </div>
       </footer>
     </div>
@@ -261,7 +300,7 @@ const TriageFlow = ({ currentPath, onNavigate }) => {
     return 'operations';
   };
 
-  const [themeName, setThemeName] = useState(determineTheme(currentPath));
+  const themeName = determineTheme(currentPath);
   const [step, setStep] = useState(1);
   const [isHtnModalOpen, setIsHtnModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -273,11 +312,6 @@ const TriageFlow = ({ currentPath, onNavigate }) => {
   const [isRejected, setIsRejected] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Sync theme if URL changes while component is mounted
-  useEffect(() => {
-    setThemeName(determineTheme(currentPath));
-  }, [currentPath]);
 
   const theme = THEMES[themeName] || THEMES.operations;
 
@@ -530,7 +564,6 @@ export default function App() {
   });
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setCurrentPath(window.location.pathname);
       const handlePopState = () => setCurrentPath(window.location.pathname);
       window.addEventListener('popstate', handlePopState);
       return () => window.removeEventListener('popstate', handlePopState);
@@ -541,7 +574,7 @@ export default function App() {
     if (typeof window !== 'undefined') {
       try {
         window.history.pushState({}, '', path);
-      } catch (e) {
+      } catch {
         // Silently swallow the security error in sandboxed preview environments
         console.warn("Sandbox routing active: URL history push blocked.");
       }
