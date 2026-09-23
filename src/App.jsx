@@ -79,17 +79,22 @@ const LandingPage = ({ onNavigate }) => {
         </div>
         <div className="flex items-center gap-4">
           <a 
-            href="https://www.peplink.com" 
-            target="_blank" 
-            rel="noreferrer"
+            href="#enterprise-sdwan" 
             className="hidden md:flex items-center shrink-0 transition-opacity hover:opacity-90"
-            title="Authorized Peplink Silver Partner"
+            title="Authorized Peplink Silver VAR | PCSS Certified"
           >
             <img 
               src="/peplink-silver-partner.svg" 
-              alt="Peplink Silver Partner" 
+              alt="Authorized Peplink Silver VAR | PCSS Certified" 
               className="h-16 w-auto shrink-0"
             />
+          </a>
+          <a
+            href="#enterprise-sdwan"
+            className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-200/80 hover:bg-amber-100 transition-colors"
+          >
+            <Network size={13} className="text-amber-600" />
+            Peplink Silver VAR | PCSS
           </a>
           <button 
             onClick={() => setIsHtnModalOpen(true)}
@@ -214,10 +219,134 @@ const LandingPage = ({ onNavigate }) => {
                   <h4 className="text-xl font-bold text-slate-900">Peplink Network Architecture</h4>
                   <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">Silver VAR</span>
                 </div>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
                   Certified multi-WAN bonding, SpeedFusion failover tuning, and enterprise router deployment for mission-critical connectivity.
                 </p>
               </div>
+              <a href="#enterprise-sdwan" className="text-xs font-semibold text-amber-700 hover:text-amber-800 flex items-center gap-1">
+                View SD-WAN Architecture &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise SD-WAN & Multi-WAN Architecture (TASK-WEB-PYM-VAR-SERVICES) */}
+      <section id="enterprise-sdwan" className="py-24 bg-white border-b border-slate-200 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider mb-4 border border-amber-200">
+              <Network size={14} className="text-amber-600" /> Authorized Peplink Silver VAR &bull; PCSS Certified
+            </div>
+            <h3 className={`text-3xl sm:text-4xl font-extrabold ${theme.headerFont} text-slate-900 mb-4 tracking-tight`}>
+              Enterprise SD-WAN &amp; Multi-WAN Architecture
+            </h3>
+            <p className="text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+              We deploy field-tested Peplink multi-WAN topology designs, enterprise SpeedFusion bonding, and full lifecycle hardware management. Concrete engineering deliverables with zero abstract consulting fluff.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Category 1: High-Availability Network Architecture & Sizing */}
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 bg-amber-100/70 rounded-2xl flex items-center justify-center mb-6 text-amber-700">
+                  <Network size={24} />
+                </div>
+                <h4 className="text-xl font-bold text-slate-900 mb-4">
+                  High-Availability Network Architecture &amp; Sizing
+                </h4>
+                <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-amber-600 mt-0.5 shrink-0" />
+                    <span>SpeedFusion Bandwidth Bonding, WAN Smoothing, and Forward Error Correction (FEC) design.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-amber-600 mt-0.5 shrink-0" />
+                    <span>Multi-WAN policy modeling (Priority, Persistence, Weighted Balance, Overflow, and Lowest Latency).</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-amber-600 mt-0.5 shrink-0" />
+                    <span>Starlink and multi-carrier 5G Standalone integration for mobile command, retail, and remote logistics.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Category 2: Authorized Hardware Provisioning & Care Management */}
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 bg-blue-100/70 rounded-2xl flex items-center justify-center mb-6 text-blue-700">
+                  <Shield size={24} />
+                </div>
+                <h4 className="text-xl font-bold text-slate-900 mb-4">
+                  Authorized Hardware Provisioning &amp; Care Management
+                </h4>
+                <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                    <span>Certified procurement across Peplink MAX, Balance, and Mobility antenna series.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                    <span>PrimeCare and EssentialCare warranty setup and license lifecycle management.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                    <span>Deal registration support and enterprise deployment consultation.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Category 3: Cloud Orchestration & Tier-1 Support Retainers */}
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 bg-indigo-100/70 rounded-2xl flex items-center justify-center mb-6 text-indigo-700">
+                  <Terminal size={24} />
+                </div>
+                <h4 className="text-xl font-bold text-slate-900 mb-4">
+                  Cloud Orchestration &amp; Tier-1 Support Retainers
+                </h4>
+                <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-indigo-600 mt-0.5 shrink-0" />
+                    <span>Multi-tenant Peplink InControl 2 organization and group hierarchy configuration.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-indigo-600 mt-0.5 shrink-0" />
+                    <span>Zero-touch provisioning (ZTP), centralized firmware rollout schedules, and automated alerting.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 size={16} className="text-indigo-600 mt-0.5 shrink-0" />
+                    <span>SLA-backed first-line diagnostic support, packet analysis, and hardware RMA triage under Section 3.7 VAR standards.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Async Call to Action */}
+          <div className="bg-gradient-to-r from-slate-900 to-indigo-950 rounded-3xl p-8 sm:p-12 text-white shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="max-w-2xl text-center lg:text-left">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full mb-3 inline-block border border-amber-400/30">
+                48-Hour Technical Diagnostic
+              </span>
+              <h4 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">
+                Submit your network topology and bandwidth requirements.
+              </h4>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Submit your network topology and bandwidth requirements through our 48-Hour Technical Diagnostic portal for a structured SD-WAN deployment blueprint.
+              </p>
+            </div>
+            <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-center gap-4">
+              <button
+                onClick={() => onNavigate('/audit')}
+                className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl text-base transition-all shadow-xl hover:shadow-amber-500/20 flex items-center justify-center gap-2"
+              >
+                <span>Initiate SD-WAN Audit</span>
+                <ArrowRight size={18} />
+              </button>
             </div>
           </div>
         </div>
@@ -239,15 +368,22 @@ const LandingPage = ({ onNavigate }) => {
         {/* Peplink Authorized Reseller & Brand Clear Space */}
         <div className="mt-16 pt-12 border-t border-slate-800 flex flex-col items-center">
           <div className="py-6 px-12 mb-3">
-            <img 
-              src="/peplink_logo.svg" 
-              alt="Peplink" 
-              className="w-28 h-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
-            />
+            <a href="#enterprise-sdwan" title="Enterprise SD-WAN & Multi-WAN Architecture" className="inline-block opacity-90 hover:opacity-100 transition-opacity">
+              <img 
+                src="/peplink_logo.svg" 
+                alt="Peplink" 
+                className="w-28 h-auto mx-auto"
+              />
+            </a>
           </div>
-          <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-8">
-            PYM Energy, LLC is an Authorized Peplink Silver Value-Added Reseller providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
+          <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-4">
+            PYM Energy, LLC is an Authorized Peplink Silver Value-Added Reseller and Peplink Certified Sales Specialist (PCSS) providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
           </p>
+          <div className="flex items-center gap-2 mb-8">
+            <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+              Authorized Peplink Silver VAR | PCSS Certified
+            </span>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500">
             <span>&copy; {new Date().getFullYear()} PYM Energy, LLC.</span>
             <span className="hidden sm:inline">&bull;</span>
