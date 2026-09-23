@@ -271,6 +271,14 @@ const LandingPage = ({ onNavigate }) => {
                   </li>
                 </ul>
               </div>
+              <a 
+                href="https://www.peplink.com/technology/speedfusion-technology/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mt-6 text-xs font-semibold text-amber-700 hover:text-amber-800 flex items-center gap-1"
+              >
+                Learn about SpeedFusion Technology &rarr;
+              </a>
             </div>
 
             {/* Category 2: Authorized Hardware Provisioning & Care Management */}
@@ -297,6 +305,14 @@ const LandingPage = ({ onNavigate }) => {
                   </li>
                 </ul>
               </div>
+              <a 
+                href="https://www.peplink.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mt-6 text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1"
+              >
+                Explore Peplink Hardware Ecosystem &rarr;
+              </a>
             </div>
 
             {/* Category 3: Cloud Orchestration & Tier-1 Support Retainers */}
@@ -333,7 +349,7 @@ const LandingPage = ({ onNavigate }) => {
                 48-Hour Technical Diagnostic
               </span>
               <h4 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">
-                Submit your network topology and bandwidth requirements.
+                Submit System Parameters for 48-Hour Technical Diagnostic
               </h4>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                 Submit your network topology and bandwidth requirements through our 48-Hour Technical Diagnostic portal for a structured SD-WAN deployment blueprint.
@@ -344,8 +360,8 @@ const LandingPage = ({ onNavigate }) => {
                 onClick={() => onNavigate('/audit')}
                 className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl text-base transition-all shadow-xl hover:shadow-amber-500/20 flex items-center justify-center gap-2"
               >
-                <span>Initiate SD-WAN Audit</span>
-                <ArrowRight size={18} />
+                <span>Submit System Parameters for 48-Hour Technical Diagnostic</span>
+                <ArrowRight size={18} className="shrink-0" />
               </button>
             </div>
           </div>
@@ -377,15 +393,17 @@ const LandingPage = ({ onNavigate }) => {
             </a>
           </div>
           <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-4">
-            PYM Energy, LLC is an Authorized Peplink Silver Value-Added Reseller and Peplink Certified Sales Specialist (PCSS) providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
+            PYM Energy, LLC is an Authorized <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Peplink</a> Silver Value-Added Reseller and Peplink Certified Sales Specialist (PCSS) providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
           </p>
           <div className="flex items-center gap-2 mb-8">
             <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-              Authorized Peplink Silver VAR | PCSS Certified
+              Authorized Peplink Silver VAR | PCSS Certified &bull; Powered by <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Peplink</a>
             </span>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500">
             <span>&copy; {new Date().getFullYear()} PYM Energy, LLC.</span>
+            <span className="hidden sm:inline">&bull;</span>
+            <span>Powered by <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">Peplink</a></span>
             <span className="hidden sm:inline">&bull;</span>
             <span className="flex items-center gap-1"><Shield size={12} /> HTN Compliant Architecture</span>
           </div>
