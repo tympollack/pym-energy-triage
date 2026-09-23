@@ -272,7 +272,7 @@ const LandingPage = ({ onNavigate }) => {
                 </ul>
               </div>
               <a 
-                href="https://www.peplink.com/technology/speedfusion-technology/" 
+                href="https://www.peplink.com/technology/speedfusion-bonding-technology/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="mt-6 text-xs font-semibold text-amber-700 hover:text-amber-800 flex items-center gap-1"
