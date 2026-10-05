@@ -81,11 +81,11 @@ const LandingPage = ({ onNavigate }) => {
           <a 
             href="#enterprise-sdwan" 
             className="hidden md:flex items-center shrink-0 transition-opacity hover:opacity-90"
-            title="Authorized Peplink Silver VAR | PCSS Certified"
+            title="Authorized Peplink Silver VAR | PCA & PCSS Certified"
           >
             <img 
               src="/peplink-silver-partner.svg" 
-              alt="Authorized Peplink Silver VAR | PCSS Certified" 
+              alt="Authorized Peplink Silver VAR | PCA & PCSS Certified" 
               className="h-16 w-auto shrink-0"
             />
           </a>
@@ -94,7 +94,7 @@ const LandingPage = ({ onNavigate }) => {
             className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-200/80 hover:bg-amber-100 transition-colors"
           >
             <Network size={13} className="text-amber-600" />
-            Peplink Silver VAR | PCSS
+            Peplink Silver VAR | PCA & PCSS
           </a>
           <button 
             onClick={() => setIsHtnModalOpen(true)}
@@ -236,7 +236,7 @@ const LandingPage = ({ onNavigate }) => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider mb-4 border border-amber-200">
-              <Network size={14} className="text-amber-600" /> Authorized Peplink Silver VAR &bull; PCSS Certified
+              <Network size={14} className="text-amber-600" /> Authorized Peplink Silver VAR &bull; PCA & PCSS Certified
             </div>
             <h3 className={`text-3xl sm:text-4xl font-extrabold ${theme.headerFont} text-slate-900 mb-4 tracking-tight`}>
               Enterprise SD-WAN &amp; Multi-WAN Architecture
@@ -393,11 +393,11 @@ const LandingPage = ({ onNavigate }) => {
             </a>
           </div>
           <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-4">
-            PYM Energy, LLC is an Authorized <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Peplink</a> Silver Value-Added Reseller and Peplink Certified Sales Specialist (PCSS) providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
+            PYM Energy, LLC is an Authorized <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Peplink</a> Silver Value-Added Reseller, Peplink Certified Associate (PCA), and Peplink Certified Sales Specialist (PCSS) providing certified SpeedFusion SD-WAN engineering and Tier-1 enterprise hardware support.
           </p>
           <div className="flex items-center gap-2 mb-8">
             <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-              Authorized Peplink Silver VAR | PCSS Certified &bull; Powered by <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Peplink</a>
+              Authorized Peplink Silver VAR | PCA & PCSS Certified &bull; Powered by <a href="https://www.peplink.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Peplink</a>
             </span>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500">
